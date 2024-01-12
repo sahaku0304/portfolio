@@ -1,0 +1,54 @@
+@use "../settings/variable" as *;
+@use "../settings/mixin" as *;
+
+button {
+  width: 200px;
+  height: 50px;
+  // padding: 12px 78px;
+  color: $color-white;
+  background-color: $color-green;
+  font-weight: 700;
+  letter-spacing: .2em;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all .3s;
+  margin-top: 1.6rem;
+  &:hover {
+    color: $color-green;
+    background-color: $color-lightBlue;
+  }
+}
+.contact__btn {
+  display: inline-block;
+  position: absolute;
+  top: 13.4rem;
+  right: 0;
+
+  & a {
+    // width: 10rem;
+    // height: 33.6rem;
+    display: inline-block;
+    background-color: $color-green;
+    color: $color-white;
+    padding: 4rem 2.6rem;
+    font-size: 2.4rem;
+    letter-spacing: .3em;
+    writing-mode: vertical-rl;
+    border-radius: 2rem 0 0 2rem;
+    
+    transition: all .3s;
+    &:hover {
+      color: $color-green;
+      background-color: $color-lightBlue;
+      & svg {
+        path {
+          stroke: $color-green;
+        }
+      }
+    }
+  }
+  
+} 

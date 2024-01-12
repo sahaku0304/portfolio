@@ -1,0 +1,74 @@
+@use "../settings/variable" as *;
+@use "../settings/mixin" as *;
+
+//pc, spでの非表示用クラス
+.pc {
+  @include sp {
+    display: none !important;
+  }
+}
+.sp {
+  @include pc {
+    display: none !important;
+  }
+}
+
+$inner: 910;
+$inner-padding: $inner + 56;
+
+html {
+  // -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  word-break: break-all;
+  //~767px
+  @include sp {
+    font-size: min(vw(10, 375), calc(500 / 375 * 10));
+  }
+  font-size: 10px;
+  //768px~(inner + 60)~
+  @media (min-width: 768px) and (max-width: 1160px) {
+    font-size: vw(10, 1160);
+  }
+  //(inner + 60)~
+  @media (min-width: 1161) {
+    font-size: 10px;
+  }
+}
+body {
+  font-family: $font-manrope, $font-sans, $font-serif;
+  color: $font-color;
+  line-height: 1;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  @include sp {
+    font-size: 1.4rem;
+  }
+}
+#container {
+  width: 100%;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: top;
+
+}
+a {
+  color: $font-color;
+  text-decoration: none;
+}
+.inner {
+  //width: 120rem;
+  width: 110rem;
+  //max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  @include sp {
+    width: 33.5rem;
+  }
+}

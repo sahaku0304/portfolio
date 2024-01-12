@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+//baseの読み込み
+@use "../scss/base";
+
+//modulesの読み込み
+@use "../scss/modules";
+
+//pagesの読み込み
+@use "../scss/pages";

@@ -1,0 +1,324 @@
+@use "../settings/variable" as *;
+@use "../settings/mixin" as *;
+.keytext {
+  width: 100%;
+  height: 70.6rem;
+  position: relative;
+  @include sp {
+    height: 38.7rem;
+  }
+  &__container {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: $font-sans;
+    line-height: calc(3.4rem/2rem);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include sp {
+      font-size: 1.6rem;
+      line-height: calc(2.4rem/1.6rem);
+    }
+  }
+  &__background {
+    width: 100%;
+    height: 100%;
+  }
+}
+.common__ttl {
+  text-align: center;
+  &-head {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    padding-bottom: 0.8rem;
+    @include sp {
+      font-size: 2.4rem;
+    }
+  }
+  svg {
+    width: 15rem;
+    @include sp {
+      width: 10rem;
+    }
+  }
+}
+.about {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10.4rem;
+    @include sp {
+      flex-direction: column;
+      padding-top: 4rem;
+      gap: 2.4rem;
+    }
+
+    &-img {
+      width: 31.4rem;
+      height: 31.4rem;
+      @include sp {
+        width: 25.2rem;
+        height: 25.2rem;
+      }
+      img {
+        border-radius: 50%;
+        box-shadow: 4rem 3rem 0 $color-Base;
+        @include sp {
+          box-shadow: 2.2rem 1.8rem 0 $color-Base;
+        }
+      }
+    }
+    &-text {
+      width: 50rem;
+      font-size: 2rem;
+      line-height: calc(3.4rem/2rem);
+      @include sp {
+        width: 33.5rem;
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: calc(2.4rem/1.6rem);
+        padding-top: 1rem;
+      }
+    }
+  }
+}
+.service {
+  position: relative;
+  padding-top: 16rem;
+  &__content {
+    &-head {
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: $color-green;
+      text-align: center;
+      line-height: calc(3.6rem/2.4rem);
+      letter-spacing: 0.2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 6rem;
+      @include sp {
+        margin-bottom: 4rem;
+      }
+      &::before {
+        margin-right: 3.8rem;
+        @include sp {
+          margin-right: 1.8rem;
+        }
+      }
+      &::after {
+        margin-left: 3.8rem;
+        @include sp {
+          margin-left: 1.8rem;
+        }
+      }
+      @include sp {
+        font-size: 1.8rem;
+        line-height: calc(2.6rem/1.8rem);
+      }
+    }
+  }
+  &__content {
+    &:nth-of-type(2) {
+      padding: 10rem 0;
+    }
+  }
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5.4rem;
+    @include sp {
+      flex-direction: column;
+      gap: 4rem;
+    }
+  }
+  &__item {
+    width: 24.5rem;
+    height: 20.9rem;
+    text-align: center;
+    img {
+      width: 8rem;
+      height: 8rem;
+      text-align: center;
+    }
+    &-text {
+      text-align: left;
+      font-size: 1.8rem;
+      line-height: calc(3rem/1.8rem);
+      margin-top: 3rem;
+      @include sp {
+        font-size: 1.6rem;
+        line-height: calc(2.4rem/1.6rem);
+        margin-top: 1.6rem;
+      }
+    }
+  }
+  &__mountain-icon {
+    img {
+      width: 29.3rem;
+      height: 11rem;
+      &:nth-of-type(1) {
+        position: absolute;
+        top: 12rem;
+        left: 0;
+        @include sp {
+          top: 8rem;
+        }
+      }
+      &:nth-of-type(2) {
+        position: absolute;
+        bottom: 62.2rem;
+        right: 0;
+        @include sp {
+          bottom: 110rem;
+        }
+      }
+      &:nth-of-type(3) {
+        position: absolute;
+        bottom: 12.3rem;
+        left: 0;
+        @include sp {
+          bottom: 40rem;
+        }
+      }
+      @include sp {
+        width: 12.2rem;
+        height: 4.5rem;
+      }
+    }
+  }
+}
+.service__content-head::before,
+.service__content-head::after {
+  content: '';
+  width: 2px;
+  height: 6.4rem;
+  background-color: $color-green;
+  transform: rotate(-30deg);
+  @include sp {
+    height: 10.1rem;
+    transform: rotate(-10deg);
+  }
+  
+}
+.works {
+  // width: 100%;
+  height: 107.4rem;
+  position: relative;
+  @include sp {
+    height: 191.9rem;
+    margin-bottom: 1rem;
+  }
+  &__container {
+    & .common__ttl {
+      padding-top: 20rem;
+      @include sp {
+        padding-top: 7.6rem;
+      }
+    }
+  }
+  &__background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  &__items {
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+    padding-top: 8rem;
+    @include sp {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 4rem;
+    }
+  }
+  &__item {
+    width: 30rem;
+    height: 39.2rem;
+    background-color: $color-white;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+  }
+  &__head {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 1.6rem 0 .8rem 1.6rem;
+    line-height: calc(1.6rem/1.4rem);
+  }
+  &__text {
+    height: 9.2rem;
+    font-size: 1.6rem;
+    padding: 0 1.6rem;
+    line-height: calc(2.4rem/1.6rem);
+  }
+}
+.contact {
+  &__container {
+    @include sp {
+      padding: 0 2rem;
+    }
+  }
+  form {
+    text-align: center;
+    padding-top: 8rem;
+  }
+  &__form {
+    text-align: left;
+    margin-bottom: 5.6rem;
+    &:nth-of-type(2) {
+      label::after {
+        display: none;
+      }
+    }
+    @include sp {
+      margin-bottom: 2.4rem;
+    }
+  }
+  label, input, textarea {
+    display: block;
+    font-size: 2rem;
+  }
+  label {
+    min-width: 16rem;
+    padding-top: 1.1rem;
+    display: flex;
+    &::after {
+      @include circle;
+    }
+  }
+  input, textarea {
+    width: 48.5rem;
+    box-sizing: border-box;
+    padding: 1.1rem 0;
+    padding-left: 2.4rem;
+    border-radius: 5px;
+    border: none;
+    background-color: $color-Base;
+    @include sp {
+      width: 100%;
+    }
+    textarea {
+      padding: 0;
+      height: 2.6rem;
+    }
+  }
+  &__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.7rem;
+    @include sp {
+      flex-direction: column;
+    }
+  }
+}

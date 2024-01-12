@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+//フォント
+$font-sans: 'Noto Sans JP', sans-serif;
+$font-serif: 'Noto Serif JP', serif;
+$font-manrope: 'Manrope', sans-serif;
+
+//カラー
+$font-color: #333333;
+$color-black: #202020;
+$color-white: #ffffff;
+$color-green: #006f62;
+$color-lightBlue: #d0e8eb;
+$color-Base: #f3f4ea;
+$color-gray: #bababa;
+
+//スペース
+$pc-section: 16rem;
+$sp-section: 8rem;
+$pc-other: 8rem;
+$sp-other: 4rem;
+
+
+@function vw($pixelsVw, $baseWidth) {
+  @return calc($pixelsVw / $baseWidth * 100vw)
+}

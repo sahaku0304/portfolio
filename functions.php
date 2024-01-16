@@ -12,10 +12,10 @@ function add_files()
 {
   $today = date('Ymd'); //ファイルバーション管理用日付
   //共通CSS
-  wp_enqueue_style('slick-style', get_theme_file_uri('/asset/plugin/bundle/swiper-bundle.min.css'), array(), NULL);
+  // wp_enqueue_style('slick-style', get_theme_file_uri('/asset/plugin/bundle/swiper-bundle.min.css'), array(), NULL);
   wp_enqueue_style('common-style', get_theme_file_uri('/asset/css/style.css'), array(), NULL);
   // 共通のJS
-  wp_enqueue_script('bundle-min', get_theme_file_uri('/asset/plugin/bundle/swiper-bundle.min.js'), array(), NULL, true);
+  // wp_enqueue_script('bundle-min', get_theme_file_uri('/asset/plugin/bundle/swiper-bundle.min.js'), array(), NULL, true);
   wp_enqueue_script('common-script', get_theme_file_uri('/asset/js/common.js'), array(), $today, true);
 }
 add_action('wp_enqueue_scripts', 'add_files');

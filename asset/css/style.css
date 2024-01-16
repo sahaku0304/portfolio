@@ -163,7 +163,7 @@ body {
 img {
   width: 100%;
   height: auto;
-  max-height: 300px;
+  max-height: 30rem;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
@@ -818,13 +818,14 @@ button:hover {
 }
 .works__item {
   width: 30rem;
-  height: 39.2rem;
+  height: 100%;
   background-color: #ffffff;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+  padding-bottom: 1em;
 }
 .works__head {
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 600;
   padding: 1.6rem 0 0.8rem 1.6rem;
   line-height: 1.1428571429;
 }
@@ -833,6 +834,12 @@ button:hover {
   font-size: 1.6rem;
   padding: 0 1.6rem;
   line-height: 1.5;
+}
+.works__text a {
+  transition: all 0.3s;
+}
+.works__text a:hover {
+  color: #006f62;
 }
 
 @media (max-width: 767px) {

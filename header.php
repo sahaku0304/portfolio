@@ -45,10 +45,10 @@
             </ul>
             <div class="mountain">
               <div class="mountain__icon">
-                <img src="asset/images/mountain-sp-w.png" alt="山のアイコン" class="mountain__left">
+                <img src="<?php echo get_template_directory_uri(); ?>/asset/images/mountain-sp-w.png" alt="山のアイコン" class="mountain__left">
               </div>
               <div class="mountain__icon">
-                <img src="asset/images/mountain-sp-w.png" alt="山のアイコン" class="mountain__right">
+                <img src="<?php echo get_template_directory_uri(); ?>/asset/images/mountain-sp-w.png" alt="山のアイコン" class="mountain__right">
               </div>
 
             </div>

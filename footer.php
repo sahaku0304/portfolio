@@ -27,7 +27,7 @@
       </p>
       <div class="smooth__button">
         <a href="#header">
-          <img src="asset/images/smooth.png" alt="上矢印">
+          <img src="<?php echo get_template_directory_uri(); ?>/asset/images/smooth.png" alt="上矢印">
         </a>
       </div>
     </footer>

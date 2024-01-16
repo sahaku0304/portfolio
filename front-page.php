@@ -1,3 +1,4 @@
+<!-- header.php読み込み -->
 <?php get_header(); ?>
 <div class="keytext">
   <div class="keytext__container">
@@ -37,7 +38,9 @@
     </a>
   </div>
 </div>
+<!-- メインコンテンツ -->
 <main>
+  <!-- aboutセクション -->
   <section id="about" class="about">
     <div class="common__ttl">
       <h2 class="common__ttl-head">about</h2>
@@ -56,6 +59,9 @@
       </p>
     </div>
   </section>
+  <!-- /aboutセクションここまで -->
+
+  <!-- serviceセクション -->
   <section id="service" class="service">
     <div class="service__contents">
       <div class="service__content">
@@ -125,7 +131,9 @@
       <img src="<?php echo get_template_directory_uri(); ?>/asset/images/mountain.svg" alt="山のアイコン">
     </div>
   </section>
-  <!-- /.service -->
+  <!-- /serviceセクションここまで -->
+
+  <!-- worksセクション -->
   <section id="works" class="works">
     <div class="works__container">
       <svg class="works__background pc" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="1440" height="1074" viewBox="0 0 1440 1074" fill="none">
@@ -140,6 +148,7 @@
           <path d="M101 4.84C97.7559 9.96 94.5118 9.96 91.2676 4.84C88.0235 -0.28 84.7794 -0.28 81.5353 4.84C78.2912 9.96 75.047 9.96 71.8029 4.84C68.5588 -0.28 65.3147 -0.28 62.0706 4.84C58.8264 9.96 55.5823 9.96 52.3382 4.84C49.0941 -0.28 45.85 -0.28 42.6058 4.84C39.3617 9.96 36.1176 9.96 32.8735 4.84C29.6294 -0.28 26.3852 -0.28 23.1411 4.84C19.897 9.96 16.6529 9.96 13.4088 4.84C10.1646 -0.28 6.92052 -0.28 3.6764 4.84L1 9" stroke="#006F62" stroke-width="2" />
         </svg>
       </div>
+      <!-- 制作実績取得ループ -->
       <div class="works__items">
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
@@ -156,28 +165,15 @@
               <div class="works__text">
                 <?php the_content(); ?>
               </div>
-              <!-- <p class="works__text"></p> -->
             </div>
           <?php endwhile; ?>
         <?php endif; ?>
-
-        <!-- <div class="works__item">
-          <a href="https://sahaku-portfolio.conohawing.com/ishii-clinic/">
-            <img src="<?php echo get_template_directory_uri(); ?>/asset/images/ishii-clinic.jpg" alt="ダミー画像" class="works__img">
-          </a>
-          <h3 class="works__head">架空歯科医院のHP</h3>
-          <p class="works__text">架空歯科医院のHPをコーディングしました。</p>
-        </div>
-        <div class="works__item">
-          <a href="https://sahaku-portfolio.conohawing.com/portfolio/">
-            <img src="<?php echo get_template_directory_uri(); ?>/asset/images/portfolio.jpg" alt="ダミー画像" class="works__img">
-          </a>
-          <h3 class="works__head">ポートフォリオサイトのコーディング</h3>
-          <p class="works__text">自身のポートフォリオサイトをコーディングしました。</p>
-        </div> -->
       </div>
     </div>
   </section>
+<!-- /worksセクションここまで -->
+
+<!-- contactセクション -->
   <sction id="contact" class="contact">
     <div class="contact__container">
       <div class="common__ttl">
@@ -186,26 +182,10 @@
           <path d="M101 4.84C97.7559 9.96 94.5118 9.96 91.2676 4.84C88.0235 -0.28 84.7794 -0.28 81.5353 4.84C78.2912 9.96 75.047 9.96 71.8029 4.84C68.5588 -0.28 65.3147 -0.28 62.0706 4.84C58.8264 9.96 55.5823 9.96 52.3382 4.84C49.0941 -0.28 45.85 -0.28 42.6058 4.84C39.3617 9.96 36.1176 9.96 32.8735 4.84C29.6294 -0.28 26.3852 -0.28 23.1411 4.84C19.897 9.96 16.6529 9.96 13.4088 4.84C10.1646 -0.28 6.92052 -0.28 3.6764 4.84L1 9" stroke="#006F62" stroke-width="2" />
         </svg>
       </div>
-      <form action="">
-        <p class="contact__form">
-          <label for="name">お名前</label>
-          <input id="name" type="text" placeholder="山田 太郎">
-        </p>
-        <p class="contact__form">
-          <label for="company">会社名</label>
-          <input id="company" type="text" placeholder="○○株式会社">
-        </p>
-        <p class="contact__form">
-          <label for="email">メールアドレス</label>
-          <input id="email" type="text" placeholder="abcdef@ab.com">
-        </p>
-        <p class="contact__form">
-          <label for="content">お問い合わせ内容</label>
-          <textarea name="" id="content" cols="30" rows="10"></textarea>
-        </p>
-        <button type="submit">送信</button>
-      </form>
+      <?php echo do_shortcode('[contact-form-7 id="e3da8c7" title="お問合せフォーム"]'); ?>
     </div>
   </sction>
+  <!-- /contactセクションここまで -->
 </main>
+<!-- footer.phpよみこみ -->
 <?php get_footer(); ?>

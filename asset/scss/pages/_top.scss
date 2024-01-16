@@ -12,14 +12,14 @@
     text-align: center;
     font-size: 2rem;
     font-family: $font-sans;
-    line-height: calc(3.4rem/2rem);
+    line-height: calc(3.4rem / 2rem);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     @include sp {
       font-size: 1.6rem;
-      line-height: calc(2.4rem/1.6rem);
+      line-height: calc(2.4rem / 1.6rem);
     }
   }
   &__background {
@@ -76,12 +76,12 @@
     &-text {
       width: 50rem;
       font-size: 2rem;
-      line-height: calc(3.4rem/2rem);
+      line-height: calc(3.4rem / 2rem);
       @include sp {
         width: 33.5rem;
         font-size: 1.6rem;
         text-align: center;
-        line-height: calc(2.4rem/1.6rem);
+        line-height: calc(2.4rem / 1.6rem);
         padding-top: 1rem;
       }
     }
@@ -96,7 +96,7 @@
       font-weight: 500;
       color: $color-green;
       text-align: center;
-      line-height: calc(3.6rem/2.4rem);
+      line-height: calc(3.6rem / 2.4rem);
       letter-spacing: 0.2;
       display: flex;
       justify-content: center;
@@ -119,7 +119,7 @@
       }
       @include sp {
         font-size: 1.8rem;
-        line-height: calc(2.6rem/1.8rem);
+        line-height: calc(2.6rem / 1.8rem);
       }
     }
   }
@@ -150,11 +150,11 @@
     &-text {
       text-align: left;
       font-size: 1.8rem;
-      line-height: calc(3rem/1.8rem);
+      line-height: calc(3rem / 1.8rem);
       margin-top: 3rem;
       @include sp {
         font-size: 1.6rem;
-        line-height: calc(2.4rem/1.6rem);
+        line-height: calc(2.4rem / 1.6rem);
         margin-top: 1.6rem;
       }
     }
@@ -196,7 +196,7 @@
 }
 .service__content-head::before,
 .service__content-head::after {
-  content: '';
+  content: "";
   width: 2px;
   height: 6.4rem;
   background-color: $color-green;
@@ -205,7 +205,6 @@
     height: 10.1rem;
     transform: rotate(-10deg);
   }
-  
 }
 .works {
   // width: 100%;
@@ -253,16 +252,16 @@
   &__head {
     font-size: 1.4rem;
     font-weight: 600;
-    padding: 1.6rem 0 .8rem 1.6rem;
-    line-height: calc(1.6rem/1.4rem);
+    padding: 1.6rem 0 0.8rem 1.6rem;
+    line-height: calc(1.6rem / 1.4rem);
   }
   &__text {
     height: 9.2rem;
     font-size: 1.6rem;
     padding: 0 1.6rem;
-    line-height: calc(2.4rem/1.6rem);
+    line-height: calc(2.4rem / 1.6rem);
     & a {
-      transition: all .3s;
+      transition: all 0.3s;
       &:hover {
         color: $color-green;
       }
@@ -271,15 +270,32 @@
 }
 .contact {
   &__container {
+    text-align: center;
     @include sp {
       padding: 0 2rem;
     }
   }
-  form {
-    text-align: center;
+  & .wpcf7-form {
+    width: 68rem;
+    margin: 0 auto;
     padding-top: 8rem;
+    @include sp {
+      width: 33.5rem;
+    }
+    & p {
+      display: flex;
+      justify-content: space-between;
+      @include sp {
+        display: block;
+      }
+      &:nth-of-type(2) {
+        label::after {
+          display: none;
+        }
+      }
+    }
   }
-  &__form {
+  & .wpcf7-form label {
     text-align: left;
     margin-bottom: 5.6rem;
     &:nth-of-type(2) {
@@ -291,7 +307,9 @@
       margin-bottom: 2.4rem;
     }
   }
-  label, input, textarea {
+  label,
+  input,
+  textarea {
     display: block;
     font-size: 2rem;
   }
@@ -303,7 +321,8 @@
       @include circle;
     }
   }
-  input, textarea {
+  .wpcf7-text,
+  .wpcf7-textarea {
     width: 48.5rem;
     box-sizing: border-box;
     padding: 1.1rem 0;
@@ -313,6 +332,7 @@
     background-color: $color-Base;
     @include sp {
       width: 100%;
+      margin-bottom: 2.4rem;
     }
     textarea {
       padding: 0;
@@ -327,5 +347,8 @@
     @include sp {
       flex-direction: column;
     }
+  }
+  .wpcf7-not-valid-tip {
+    text-align: right;
   }
 }

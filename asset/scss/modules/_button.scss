@@ -21,6 +21,68 @@ button {
     background-color: $color-lightBlue;
   }
 }
+.btn {
+  width: 355px;
+  height: 44px;
+  margin: 0 auto;
+  margin-top: 9.8rem;
+  text-align: center;
+  background: $color-green;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  @include sp {
+    width: 100%;
+    max-width: 304px;
+    height: 39px;
+    margin-top: 4rem;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: $color-lightBlue;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform ease 0.3s;
+
+    &:hover {
+      z-index: 0;
+    }
+  }
+  &:hover > .wpcf7-submit {
+    color: $color-green;
+  }
+  &:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+}
+//送信ボタンのスタイル
+.wpcf7-submit {
+  padding: 0 160px;
+  color: $color-white;
+  border: none;
+  margin: 0 auto;
+  line-height: 44px;
+  background: transparent;
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  @include sp {
+    padding: 0;
+    line-height: 39px;
+  }
+}
 .contact__btn {
   display: inline-block;
   position: absolute;
